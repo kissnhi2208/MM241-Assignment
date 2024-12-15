@@ -47,7 +47,7 @@ class Policy2210xxx(Policy):
             # Đánh giá fitness của từng cá thể trong quần thể
             fitness_scores = [self._evaluate_solution(individual, products, stocks) for individual in population]
 
-            # Lựa chọn các cá thể tốt nhất (có fitness cao nhất)
+            # Lựa chọn các cá thể tốt nhất (có fitness thấp nhất)
             population = self._select_population(population, fitness_scores)
 
             # Lai ghép và đột biến để tạo ra thế hệ tiếp theo
